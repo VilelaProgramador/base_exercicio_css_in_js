@@ -10,18 +10,28 @@ const FormVagas = ({ aoPesquisar }: Props) => {
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
+    aoPesquisar(termo.toLowerCase())
   }
 
   return (
-    <S.Form onSubmit={aoEnviarForm}>
-      <S.Campo
-        placeholder="Front-end, fullstack, node, design"
-        onChange={(e) => setTermo(e.target.value)}
-        type="search"
-      />
-      <S.Botao type="submit">Pesquisar</S.Botao>
-    </S.Form>
+    <S.Secao>
+      <S.Form
+        onSubmit={aoEnviarForm}
+        role="search"
+        aria-label="Pesquisar vagas"
+      >
+        <S.Label htmlFor="pesquisa">Pesquisar vagas</S.Label>
+        <S.Campo
+          id="pesquisa"
+          name="q"
+          placeholder="Front-end, fullstack, node, design"
+          type="search"
+          value={termo}
+          onChange={(e) => setTermo(e.target.value)}
+        />
+        <S.Botao type="submit">Pesquisar</S.Botao>
+      </S.Form>
+    </S.Secao>
   )
 }
 

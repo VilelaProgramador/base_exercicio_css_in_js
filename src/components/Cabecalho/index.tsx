@@ -1,8 +1,10 @@
-import { CabecalhoEstilizado } from './styles'
+import { CabecalhoEstilizado, Inner } from './styles'
 
 const Cabecalho = () => (
   <CabecalhoEstilizado>
-    <h1>EBAC Jobs</h1>
+    <Inner>
+      <h1>EBAC Jobs</h1>
+    </Inner>
   </CabecalhoEstilizado>
 )
 

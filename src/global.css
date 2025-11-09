@@ -1,28 +1,36 @@
 :root {
   --cor-principal: #a7727d;
+  --cor-principal-escura: #8a5f68;
   --cor-secundaria: #f9f5e7;
+
+  --borda: #e2e8f0;
+  --bg-card:#f3eadc;
+  --container: 980px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Lato, sans-serif;
+  font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   list-style: none;
 }
 
+html, body, #root { height: 100%; }
+
 body {
+  background: #fafafa;
+  color: #222;
   padding-bottom: 120px;
 }
 
 .container {
-  max-width: 1024px;
+  max-width: var(--container);
   width: 100%;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 @media (max-width: 1024px) {
-  .container {
-    max-width: 80%;
-  }
+  .container { max-width: 90%; }
 }

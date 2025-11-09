@@ -1,13 +1,13 @@
-import { FormHero, TituloHero } from './styles'
+import { HeroWrapper, Banner, Titulo } from './styles'
 
 const Hero = () => (
-  <FormHero>
-    <div className="container">
-      <TituloHero>
+  <HeroWrapper>
+    <Banner>
+      <Titulo>
         As melhores vagas para tecnologia, design e artes visuais.
-      </TituloHero>
-    </div>
-  </FormHero>
+      </Titulo>
+    </Banner>
+  </HeroWrapper>
 )
 
 export default Hero
